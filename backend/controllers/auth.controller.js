@@ -133,7 +133,7 @@ export const refreshToken = async (req, res) => {
         // Check if the refresh token exists in Redis
         const storedRefreshToken = await redis.get(`refresh_token:${userId}`);
         if (storedRefreshToken !== refreshToken) {
-            return res.status(401).json({ message: "Invalid refresh token" });
+            return res.status(400).json({ message: "Invalid refresh token" });
         }
 
         const accessToken = jwt.sign({ userId }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15m" }); // Access token valid for another 15 minutes
