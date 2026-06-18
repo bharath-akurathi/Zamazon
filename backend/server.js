@@ -34,14 +34,6 @@ app.use("/api/coupons", couponRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Zamazon API is running vroom vroooom');
-});
-
-app.get('/health', (req, res) => {
-  res.json({ message: "Server is running smoothly" });
-});
-
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'frontend/dist')));
   // Change '*' to '/{*splat}'
