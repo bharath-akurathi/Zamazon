@@ -15,7 +15,7 @@ Zamazon is a modern, enterprise-grade e-commerce platform built on the MERN stac
 
 ## 🛡️ The Digital Fortress (Security Architecture)
 
-### System Design for Authentication
+### System Design ( for Authentication )
 
 ![System design (for Auth)](./system_design.png)
 
