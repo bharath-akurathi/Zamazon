@@ -15,6 +15,10 @@ Zamazon is a modern, enterprise-grade e-commerce platform built on the MERN stac
 
 ## 🛡️ The Digital Fortress (Security Architecture)
 
+### System Design for Authentication
+
+![System design (for Auth)](./system_design.png)
+
 A significant portion of development was dedicated to fortifying the application against modern web vulnerabilities. 
 
 * **Zero-Knowledge Storage:** Passwords never touch the database in plain text. A Mongoose `pre-save` hook intercepts, salts, and heavily hashes passwords using `bcryptjs` before committing to MongoDB.
